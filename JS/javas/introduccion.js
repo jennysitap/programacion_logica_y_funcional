@@ -124,3 +124,17 @@ document.querySelector("#birthDate").addEventListener('click', (evt)=>{
 })
 
 //Buscador por frases
+document
+  .querySelector(".search input[type='search']")
+  .addEventListener("keypress", (evt) => {
+    if (evt.key === "Enter") {
+      let palabra = evt.target.value.toLowerCase();
+      if (palabra.trim() === "") return alert("Ingrese una frase o palabra");
+ 
+      let res = arr_original.filter((item) =>
+        item.personaje.phrases.some((f) => f.toLowerCase().includes(palabra))
+      );
+      console.log("Coincidencias por frase", res);
+      imprimir(res);
+    }
+  });
