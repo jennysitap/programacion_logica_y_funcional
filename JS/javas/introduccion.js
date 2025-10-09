@@ -30,3 +30,8 @@ fetch(url+"characters?page="+page).then(response=>{
 for(let i=1; i<=5;i++){
   getlista(i)
 }
+setTimeout(()=>{
+  document.getElementById("preloader").style.display="none"
+},2000)
+//edad menor que 18
+document.querySelector("#linkEdad")
