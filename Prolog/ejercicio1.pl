@@ -18,16 +18,17 @@ jefe(elliot,heather).
 %¿Es Lori jefe de alguien? False
 %jefe(lori, X).
 
-%Mostrar empleados del jefe de Heather
-
+%Mostrar empleados del jefe de Heather: Sale Rebecca
+%jefe(Jefe,heather),jefe(Jefe,Empleado).
 
 %¿Es Timothy jefe de Rebecca? False
 %jefe(timothy, rebecca).
 
-%Mostrar compañeros de nivel de Mike
+%Mostrar compañeros de nivel de Mike: Salen todos
+%jefe(Jefe, mike), jefe(Jefe, Compañeros), Compañeros \= mike.
 
+%¿Es el jefe de Rebecca compañero de nivel de David?
+jefe(Jefe, rebecca), jefe(Jefejefe, Jefe), jefe(Jefejefe,david).
 
-%¿Es el jefe de Rebeca compañero de nivel de David?
-
-
-%¿Es compañero de nivel Mike de Lori?
+%¿Es compañero de nivel Mike de Lori? Mark, lo que confirma que estan en el mismo nivel
+%jefe(Jefe,mike),jefe(Jefe,lori).
